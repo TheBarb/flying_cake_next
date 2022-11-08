@@ -14,7 +14,7 @@ const Home = ({cakes, sweetCakes, saltyCakes}) => {
     </Head>
 
     <main className={styles.main}>
-    <ViewportConditional cakes={cakes} sweetCakes={sweetCakes} saltyCakes={saltyCakes}/>
+    <ViewportConditional sweetCakes={sweetCakes} saltyCakes={saltyCakes}/>
     </main>
 
   

@@ -1,0 +1,21 @@
+
+.container{
+    width: 100vw;
+    height: auto;
+    background-color: red;
+}
+
+.backgroundImage {
+position: absolute;
+z-index: 0;
+}
+
+.description {
+    position: relative;
+    z-index: 1;
+}
+
+.punchline {
+    position: relative;
+    z-index: 1;
+}
