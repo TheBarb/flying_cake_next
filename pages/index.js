@@ -23,7 +23,7 @@ const Home = ({cakes, sweetCakes, saltyCakes}) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:1337/api/products?pagination[page]=1&pagination[pageSize]=50')
+  const res = await fetch('https://nameless-refuge-71226.herokuapp.com/api/products?pagination[page]=1&pagination[pageSize]=50')
   const products = await res.json()
   const cakes = products.data
   const sweetCakes = cakes.filter(cake => cake.attributes.sweetnotsalty)
