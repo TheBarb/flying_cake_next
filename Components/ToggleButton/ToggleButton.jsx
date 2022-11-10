@@ -5,12 +5,12 @@ const ToggleButton = ({isToggled, setIsToggled}) => {
     <>
 
     <div className={styles.toggle_container}>
-    <span className='legend'>SÜSS</span>
+    <span className='legend'>süss</span>
       <input type="checkbox" id="flavour" className={styles.toggle} onChange={() => setIsToggled(!isToggled)}/>
       <label htmlFor="flavour" className={styles.label}>
         <div className={styles.ball}></div>
       </label>
-      <span className='legend'>SALZIG</span>
+      <span className='legend'>salzig</span>
     </div>
    </>
   )

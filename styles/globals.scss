@@ -70,7 +70,7 @@ $fc_paragraph_font_family: 'Raleway', sans-serif;
 %fc_legend_styles {
 font-weight: $fc_font_weight;
   font-family: $fc_headline_font_family;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 @mixin fc_type_sizes($font_size, $line_height) {

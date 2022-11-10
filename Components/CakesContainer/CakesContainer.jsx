@@ -20,8 +20,10 @@ const CakesContainer = ({sweetCakes, saltyCakes}) => {
 
   return (
     <>
+  
         <ToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/>
         <CakeList myCakes={myCakes} color={color}/>
+     
     </>
   )
 }
