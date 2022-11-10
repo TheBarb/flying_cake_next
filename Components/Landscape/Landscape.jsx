@@ -1,8 +1,8 @@
-
+import styles from './landscape.module.scss'
 
 const Landscape = () => {
   return (
-    <div>
+    <div className={styles.mobileFirst}>
       Mobile first!
     </div>
   )

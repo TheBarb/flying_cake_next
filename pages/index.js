@@ -15,7 +15,7 @@ const Home = ({sweetCakes, saltyCakes}) => {
 
     <main>
     <div className={styles.banner}>
-      <ViewportConditional />
+    <ViewportConditional />
     <CakesContainer sweetCakes={sweetCakes} saltyCakes={saltyCakes} />
     </div>
     </main>

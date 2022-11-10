@@ -1,4 +1,4 @@
-import styles from './viewportConditional.module.scss'
+
 import Portrait from '../Portrait/Portrait'
 import Landscape from '../Landscape/Landscape'
 import { useState, useEffect } from 'react';
