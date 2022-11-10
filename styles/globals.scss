@@ -1,0 +1,130 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+//colors
+
+$persimmon: #E45E14ff;
+$independence: #525263ff;
+$tuscany: #BB9D90ff;
+$sweet-fuzzy-wuzzy: #C86860ff;
+$cardinal: #B1363Dff;
+$salty-dark-sea-green: #8ABA88ff;
+$pewter-blue: #83ABBFff;
+$eggplant: #6F4963ff;
+$copper-red: #C97163ff;
+
+
+//types
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto&display=swap');
+
+$fc_font_weight: 400;
+$fc_display_font_family:'Roboto', sans-serif;
+$fc_headline_font_family: 'Montserrat', sans-serif;
+$fc_paragraph_font_family: 'Raleway', sans-serif;
+
+
+
+%fc_display_styles {
+    font-weight: $fc_font_weight;
+    font-family: $fc_display_font_family;
+    text-transform: uppercase;
+}
+
+%fc_headline_styles {
+    font-weight: $fc_font_weight;
+    font-family: $fc_headline_font_family;
+
+}
+
+%fc_paragraph_styles {
+    font-weight: $fc_font_weight;
+    font-family: $fc_paragraph_font_family;
+ 
+}
+
+%fc_legend_styles {
+font-weight: $fc_font_weight;
+  font-family: $fc_headline_font_family;
+  text-transform: uppercase;
+}
+
+@mixin fc_type_sizes($font_size, $line_height) {
+    font-size: $font_size;
+    line-height: $line_height;
+  }
+
+//globals
+//font-sizes for headlines: type-scale.com (Major Second) 
+//font-sizes for displays: (Major Third)
+
+.display_one {
+    @extend %fc_display_styles;
+    @include fc_type_sizes(4.77rem, 5.72rem);
+  }
+  
+.display_two {
+    @extend %fc_display_styles;
+    //@include fc_type_sizes(clamp(3.815rem,12vw + 1rem, 12rem), 4.58rem);
+    @include fc_type_sizes(clamp(3.815rem,12vw + 1rem, 12rem), clamp(4.58rem, 15vw + 1rem, 15rem));
+  }
+  
+  h1 {
+    @extend %fc_headline_styles;
+    @include fc_type_sizes(1.802rem, 2.703rem);
+  }
+  
+  h2 {
+    @extend %fc_headline_styles;
+    @include fc_type_sizes(1.602rem, 2.403rem);
+  }
+  
+  h3 {
+    @extend %fc_headline_styles;
+    @include fc_type_sizes(clamp(1.375rem, 4vw + 0.25rem, 1.75rem), 2.136rem);
+  }
+  
+  h4 {
+    @extend %fc_headline_styles;
+    @include fc_type_sizes(1.266rem, 1.899rem);
+  }
+  
+  p {
+    @extend %fc_paragraph_styles !optional;
+    @include fc_type_sizes(1rem, 1.5rem);
+  }
+  
+  .p_lead {
+    @extend %fc_paragraph_styles !optional;
+    @include fc_type_sizes(1.25rem, 1.875rem);
+  }
+  
+  .legend {
+    @extend %fc_legend_styles !optional;
+    @include fc_type_sizes(24px, 28.8px);
+  }
+ 

@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import ViewportConditional from '../Components/ViewportConditional/ViewportConditional'
+import CakesContainer from '../Components/CakesContainer/CakesContainer'
 
 
-
-const Home = ({cakes, sweetCakes, saltyCakes}) => {
+const Home = ({sweetCakes, saltyCakes}) => {
   return (
     <>
     <Head>
@@ -13,8 +13,11 @@ const Home = ({cakes, sweetCakes, saltyCakes}) => {
       <link rel="icon" href="/favicon.svg" />
     </Head>
 
-    <main className={styles.main}>
-    <ViewportConditional sweetCakes={sweetCakes} saltyCakes={saltyCakes}/>
+    <main>
+    <div className={styles.banner}>
+      <ViewportConditional />
+    <CakesContainer sweetCakes={sweetCakes} saltyCakes={saltyCakes} />
+    </div>
     </main>
 
   

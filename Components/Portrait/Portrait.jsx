@@ -15,8 +15,10 @@ const Portrait = () => {
     objectFit='contain'
     priority= 'true'
     />
-      <h4 className={styles.description}>Handgemachte Kuchen - frisch geliefert</h4>
-    <div className={styles.punchline}>FLYING<br/> CAKE</div>
+
+    <h3 className={styles.description}> Handgemachte Kuchen - frisch geliefert</h3>
+    <div className={`${styles.punchline} display_two`}>EAT<br/> MORE<br/>CAKE</div>
+
     </div>
   )
 }

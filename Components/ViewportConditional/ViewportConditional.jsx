@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const ViewportConditional = () => {
     const [width, setWidth] = useState(0);
-    const breakpoint = 481;
+    const breakpoint = 768;
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ const ViewportConditional = () => {
     }, []);
 
   return width < breakpoint? (
-    <Portrait/>
+      <Portrait/>
   ) : (
     <Landscape/>
   );
