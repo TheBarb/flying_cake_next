@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import ToggleButton from '../ToggleButton/ToggleButton'
+import NewToggleButton from '../NewToggleButton/NewToggleButton'
 import CakeList from '../CakeList/CakeList'
+import styles from './cakesContainer.module.scss'
 
 
 const CakesContainer = ({sweetCakes, saltyCakes}) => {
@@ -20,9 +22,11 @@ const CakesContainer = ({sweetCakes, saltyCakes}) => {
 
   return (
     <>
-  
-        <ToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/>
+   <div className={styles.flexWrapper}>
+        {/* <ToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/> */}
+        <NewToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/>
         <CakeList myCakes={myCakes} color={color}/>
+        </div>
      
     </>
   )
