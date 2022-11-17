@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import ToggleButton from '../ToggleButton/ToggleButton'
 import NewToggleButton from '../NewToggleButton/NewToggleButton'
+import SwipeToggleButton from '../SwipeToggleButton/SwipeToggleButton'
 import CakeList from '../CakeList/CakeList'
 import styles from './cakesContainer.module.scss'
 
 
 const CakesContainer = ({sweetCakes, saltyCakes}) => {
 
-    const[isToggled, setIsToggled] = useState(true) 
+    const[isToggled, setIsToggled] = useState(false) 
 
     let myCakes = [];
     let color = "";
   
-        if (isToggled) {
+        if (!isToggled) {
             myCakes = sweetCakes
             color = "rgb(237, 123, 180)"
         } else {
@@ -24,7 +25,8 @@ const CakesContainer = ({sweetCakes, saltyCakes}) => {
     <>
    <div className={styles.flexWrapper}>
         {/* <ToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/> */}
-        <NewToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/>
+      {/*   <NewToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/> */}
+        <SwipeToggleButton isToggled={isToggled} setIsToggled={setIsToggled}/>
         <CakeList myCakes={myCakes} color={color}/>
         </div>
      
